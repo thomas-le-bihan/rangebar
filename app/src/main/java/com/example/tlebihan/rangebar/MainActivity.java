@@ -6,12 +6,16 @@ import android.view.KeyEvent;
 import android.view.View;
 import android.widget.EditText;
 
+import com.crittercism.app.Crittercism;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        Crittercism.initialize(getApplicationContext(), "00f108f97d0543a79e7489da664358f400555300");
 
         final RangeBar rangeBar = (RangeBar) findViewById(R.id.rangebar);
         final EditText edtMin = (EditText) findViewById(R.id.edt_min);
